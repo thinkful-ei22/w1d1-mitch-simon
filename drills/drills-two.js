@@ -77,37 +77,23 @@
 
 // daysInMonth('January');
 
-// function rockPaperScissors(num) {
-//   if (num !== 1 && num !== 2 && num !== 3) {
-//     throw new Error('Number must be 1, 2, or 3');
-//   }
-// 	const randomNo = Math.floor(Math.random() * 3) + 1;
-//   console.log(`the computer picked ${randomNo}`);
-//   if (num === randomNo) {
-//     return 'tie';
-//   }
-//   switch(num) {
-//     case 1:
-//       if (randomNo === 2) {
-//         return 'lose';
-//       } else {
-//         return 'win';
-//       }
-//     case 2:
-//       if (randomNo === 3) {
-//         return 'lose';
-//       } else {
-//         return 'win';
-//       }
-//     case 3:
-//       if (randomNo === 1) {
-//         return 'lose';
-//       } else {
-//         return 'win';
-//       }
-//   }
-// }
+function rockPaperScissors(num) {
+  if (num !== 1 && num !== 2 && num !== 3) {
+    throw new Error('Number must be 1, 2, or 3');
+  }
+	const randomNo = Math.floor(Math.random() * 3) + 1;
+  console.log(`the computer picked ${randomNo}`);
+  if (num === randomNo) {
+    return 'tie';
+  }
+  if (num === 1 && randomNo === 2 || num === 2 && randomNo === 3 || num === 3 && randomNo === 1) {
+    return 'lose';
+  } else {
+    return 'win';
+  }
+}
 
-// console.log(rockPaperScissors(3));
+console.log(rockPaperScissors(3));
+
 
 
