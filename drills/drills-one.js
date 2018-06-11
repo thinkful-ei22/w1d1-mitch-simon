@@ -8,6 +8,9 @@ function whoAmI(name, age) {
   if (typeof name === 'undefined' || typeof age === 'undefined') {
     throw new Error('Arguments not valid');
   }
+  if (typeof age !== 'number' || typeof name !== 'string') {
+    throw new Error('Name needs to be a string, age needs to be a number');
+  }
   if (age <= 0) {
     throw new Error('age cannot be negative or zero');
   }
@@ -20,6 +23,8 @@ function whoAmI(name, age) {
 try {
   whoAmI('John', -77);
   whoAmI('Not John', 30);
+  whoAmI(85, 30);
+  whoAmI('John', '23');
   whoAmI();
 }
 catch(e) {
