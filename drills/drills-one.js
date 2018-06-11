@@ -5,6 +5,9 @@ function yearOfBirth(age) {
 }
 
 function whoAmI(name, age) {
+  if (typeof name === 'undefined' || typeof age === 'undefined') {
+    throw new Error('Arguments not valid');
+  }
   if (age <= 0) {
     throw new Error('age cannot be negative or zero');
   }
@@ -17,9 +20,10 @@ function whoAmI(name, age) {
 try {
   whoAmI('John', -77);
   whoAmI('Not John', 30);
+  whoAmI();
 }
 catch(e) {
   console.error(e.messege);
 }
 
-whoAmI('John', 7);
+whoAmI();
