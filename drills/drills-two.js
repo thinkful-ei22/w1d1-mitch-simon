@@ -1,9 +1,7 @@
 'use strict';
 
 // function jediName(firstName, lastName) {
-//   let splitFirst = firstName.split('');
-//   let splitLast = lastName.split('');
-//   console.log(splitLast[0] + splitLast[1] + splitLast[2] + splitFirst[0] + splitFirst[1])
+//   console.log(lastName[0] + lastName[1] + lastName[2] + firstName[0] + firstName[1]);
 // }
 
 // jediName('John', 'Dude');
@@ -26,15 +24,15 @@
 // beyond(Infinity);
 
 // function decode(str) {
-//   let wordArray = str.toLowerCase().split('');
-//   if (wordArray[0] === 'a') {
-//     return wordArray[1];
-//   } else if (wordArray[0] === 'b') {
-//     return wordArray[2];
-//   } else if (wordArray[0] === 'c') {
-//     return wordArray[3];
-//   } else if (wordArray[0] === 'd') {
-//     return wordArray[4];
+//   let word = str.toLowerCase();
+//   if (word[0] === 'a') {
+//     return word[1];
+//   } else if (word[0] === 'b') {
+//     return word[2];
+//   } else if (word[0] === 'c') {
+//     return word[3];
+//   } else if (word[0] === 'd') {
+//     return word[4];
 //   } else {
 //     return ' ';
 //   }
@@ -79,37 +77,37 @@
 
 // daysInMonth('January');
 
-function rockPaperScissors(num) {
-  if (num !== 1 && num !== 2 && num !== 3) {
-    throw new Error('Number must be 1, 2, or 3');
-  }
-	const randomNo = Math.floor(Math.random() * 3) + 1;
-  console.log(`the computer picked ${randomNo}`);
-  if (num === randomNo) {
-    return 'tie';
-  }
-  switch(num) {
-    case 1:
-      if (randomNo === 2) {
-        return 'lose';
-      } else {
-        return 'win';
-      }
-    case 2:
-      if (randomNo === 3) {
-        return 'lose';
-      } else {
-        return 'win';
-      }
-    case 3:
-      if (randomNo === 1) {
-        return 'lose';
-      } else {
-        return 'win';
-      }
-  }
-}
+// function rockPaperScissors(num) {
+//   if (num !== 1 && num !== 2 && num !== 3) {
+//     throw new Error('Number must be 1, 2, or 3');
+//   }
+// 	const randomNo = Math.floor(Math.random() * 3) + 1;
+//   console.log(`the computer picked ${randomNo}`);
+//   if (num === randomNo) {
+//     return 'tie';
+//   }
+//   switch(num) {
+//     case 1:
+//       if (randomNo === 2) {
+//         return 'lose';
+//       } else {
+//         return 'win';
+//       }
+//     case 2:
+//       if (randomNo === 3) {
+//         return 'lose';
+//       } else {
+//         return 'win';
+//       }
+//     case 3:
+//       if (randomNo === 1) {
+//         return 'lose';
+//       } else {
+//         return 'win';
+//       }
+//   }
+// }
 
-console.log(rockPaperScissors(3));
+// console.log(rockPaperScissors(3));
 
 
