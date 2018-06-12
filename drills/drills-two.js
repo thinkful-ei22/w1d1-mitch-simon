@@ -33,16 +33,16 @@ function decode(str) {
   }
   const word = str.toLowerCase();
   switch (word[0]){
-    case 'a':
-      return word[1];
-    case 'b':
-      return word[2];
-    case 'c':
-      return word[3];
-    case 'd':
-      return word[4];
-    default:
-      return ' ';
+  case 'a':
+    return word[1];
+  case 'b':
+    return word[2];
+  case 'c':
+    return word[3];
+  case 'd':
+    return word[4];
+  default:
+    return ' ';
   }
 }
 
@@ -54,31 +54,31 @@ function daysInMonth (month, leapYear) {
   let days = 0;
 
   switch(month) {
-    case 'January':
-    case 'March':
-    case 'May':
-    case 'July':
-    case 'August':
-    case 'October':
-    case 'December':
-      days = 31;
-      break;
-    case 'April':
-    case 'June':
-    case 'September':
-    case 'November':
-      days = 30;
-      break;
-    case 'February':
-      if (leapYear) {
-        days = 29;
-      }
-      else {
-        days = 28;
-      }
-      break;
-    default:
-      throw new Error('Must provide a valid month.');
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    days = 31;
+    break;
+  case 'April':
+  case 'June':
+  case 'September':
+  case 'November':
+    days = 30;
+    break;
+  case 'February':
+    if (leapYear) {
+      days = 29;
+    }
+    else {
+      days = 28;
+    }
+    break;
+  default:
+    throw new Error('Must provide a valid month.');
   }
 
   console.log(days);
@@ -91,7 +91,7 @@ function rockPaperScissors(num) {
   if (num !== 1 && num !== 2 && num !== 3) {
     throw new Error('Number must be 1, 2, or 3');
   }
-	const randomNo = Math.floor(Math.random() * 3) + 1;
+  const randomNo = Math.floor(Math.random() * 3) + 1;
   console.log(`the computer picked ${randomNo}`);
   if (num === randomNo) {
     return 'tie';
